@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de datos</title>
+
+    <link rel="shortcut icon" href="./favicon.png">
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>Directo</h2>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Análisis de datos obtenidos de los leads</h1>
+        </section>
+        <section class="main-content">
+            <h2>Análisis de los resultados obtenidos con los leads de enero 2022</h2>
+            <div class="container-data">
+                <div class="container-data__general">
+                    <h3>General</h3>
+                    <ul class="lista-de-datos">
+                        <li>Total leads: <span id="total-general"></span></li>
+                        <li>Leads repetidos: <span id="repetidos-general"></span></li>
+                        <li>Leads contactados: <span id="contactados-general"></span></li>
+                        <li>No pudieron contactarse: <span id="noCont-general"></span></li>
+                        <li>No califican: <span id="noCal-general"></span></li>
+                        <li>No están interesados: <span id="noInt-general"></span></li>
+                        <li>Interesados que pueden iniciar pronto: <span id="int-general"></span></li>
+                        <li>Procesos iniciados: <span id="inicio-general"></span></li>
+                    </ul>
+                </div>
+                <div class="container-data__especifico">
+                    <h3>Por afiliadora</h3>
+                    <form name="listaAfiliadoras" class="lista-afiliadoras">
+                        <label for="radio-savannah">
+                            <input type="radio" name="afiliadoras" value="savannah"id="radio-savannah">
+                            <span>Savannah</span> 
+                        </label>
+                        <label for="radio-leycy">
+                            <input type="radio" name="afiliadoras" value="leycy" id="radio-leycy">
+                            <span>Leycy</span>
+                        </label>
+                    </form>
+                    <ul class="lista-de-datos">
+                        <li>Total: <span id="total-especifico"></span></li>
+                        <li>Leads repetidos en esta data: <span id="repetidos-especifico"></span></li>
+                        <li>Leads contactados: <span id="contactados-especifico"></span></li>
+                        <li>No pudieron contactarse: <span id="noCont-especifico"></span></li>
+                        <li>No califican: <span id="noCal-especifico"></span></li>
+                        <li>No están interesados: <span id="noInt-especifico"></span></li>
+                        <li>Interesados que pueden iniciar pronto: <span id="int-especifico"></span></li>
+                        <li>Procesos iniciados: <span id="inicio-especifico"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-comparativo">
+                <h2>Comparativo</h2>
+                <p>
+                    Calculamos el porcentaje de <strong>leads totales que han sido contactados</strong>  y luego el porcentaje de los contactados dentro de cada categoría.
+                </p>
+                <div class="container-comparativo__box">
+                    <div class="box__afiliadoras">
+                        <span>Savannah</span>
+                        <span>Leycy</span>
+                    </div>
+                    <ul class="lista-de-datos">
+                        <li>
+                            <span id="contactados-l"></span>
+                            Leads contactados
+                            <span id="contactados-r"></span>
+                        </li>
+                        <li>
+                            <span id="noCont-l"></span>
+                            No pudieron contactarse
+                            <span id="noCont-r"></span>
+                        </li>
+                        <li>
+                            <span id="noCal-l"></span>
+                            No califican
+                            <span id="noCal-r"></span>
+                        </li>
+                        <li>
+                            <span id="noInt-l"></span>
+                            No están interesados
+                            <span id="noInt-r"></span>
+                        </li>
+                        <li>
+                            <span id="int-l"></span>
+                            Interesados<span id="int-r"></span>
+                        </li>
+                        <li>
+                            <span id="inicio-l"></span>
+                            Procesos iniciados
+                            <span id="inicio-r"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section> 
+    </main>
+    
+
+    <script src="./datos.js"></script>
+    <script src="./analisis.js"></script>
+    <script src="./dom.js"></script>
+</body>
+</html>
