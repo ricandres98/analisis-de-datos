@@ -61,7 +61,7 @@ const elementosBloqueEspec = {
     iniciados: inicioEspec
 };
 
-// escribirBloque(elementosBloqueEspec, savannah);
+// escribirBloque(elementosBloqueEspec, subject1);
 
 const listaAfiliadoras = document.listaAfiliadoras;
 const listaAfiliadorasArray = listaAfiliadoras.afiliadoras;
@@ -79,12 +79,12 @@ listaAfiliadoras.addEventListener('click', () => {
     opcionSeleccionada = listaAfiliadorasArray[i].value;
 
     switch(opcionSeleccionada) {
-        case 'savannah': 
-            escribirBloque(elementosBloqueEspec, savannah);
+        case 'subject1': 
+            escribirBloque(elementosBloqueEspec, subject1);
             break;
 
-        case 'leycy':
-            escribirBloque(elementosBloqueEspec, leycy);
+        case 'subject2':
+            escribirBloque(elementosBloqueEspec, subject2);
             break;
     }
 
@@ -132,5 +132,5 @@ function escribirPorcentajes(bloque, lista) {
     bloque.porcentajeIniciado.innerHTML = lista.calcularPorcentajeCategoria('inicio') + '%';
 }
 
-escribirPorcentajes(elementosComparaL, savannah);
-escribirPorcentajes(elementosComparaR, leycy);
+escribirPorcentajes(elementosComparaL, subject1);
+escribirPorcentajes(elementosComparaR, subject2);
